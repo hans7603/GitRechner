@@ -1,2 +1,2 @@
-# Snips-GitRechner
+# GitRechner
 Taschenrechner mit Grundrechnungsarten und weiteren Funktionen
