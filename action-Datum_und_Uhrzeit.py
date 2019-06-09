@@ -6,7 +6,7 @@ import random
 import toml
 
 
-USERNAME_INTENTS = "hans7603"
+USERNAME_INTENTS = "domi"
 MQTT_BROKER_ADDRESS = "localhost:1883"
 MQTT_USERNAME = None
 MQTT_PASSWORD = None
