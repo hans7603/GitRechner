@@ -23,18 +23,6 @@ def subscribe_intent_callback(hermes, intent_message):
     current_session_id = intent_message.session_id
     hermes.publish_end_session(current_session_id, result_sentence)
 
-"""
-    if intentname == user_intent("currentDate"):
-        year = datetime.datetime.now().year
-        month = datetime.datetime.now().month
-        day = datetime.datetime.now().day
-        weekday = datetime.datetime.now().isoweekday()
-        weekday_list = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']
-        result_sentence = "Heute ist {0}, der {1}.{2}.{3} .".format(weekday_list[weekday - 1], day, month, year)
-        current_session_id = intent_message.session_id
-        hermes.publish_end_session(current_session_id, result_sentence)
-"""
-
 if __name__ == "__main__":
     snips_config = toml.load('/etc/snips.toml')
     if 'mqtt' in snips_config['snips-common'].keys():
