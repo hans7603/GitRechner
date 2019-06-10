@@ -19,7 +19,7 @@ def user_intent(intentname):
 def subscribe_intent_callback(hermes, intent_message):
     intentname = intent_message.intent.intent_name
 
-    result_sentence = "Hallo, das ist eine Meldung!"
+    result_sentence = "Hallo, ist da jemand?"
     current_session_id = intent_message.session_id
     hermes.publish_end_session(current_session_id, result_sentence)
 
