@@ -15,13 +15,18 @@ MQTT_PASSWORD = None
 def user_intent(intentname):
     return USERNAME_INTENTS + ":" + intentname
 
-
 def subscribe_intent_callback(hermes, intent_message):
     intentname = intent_message.intent.intent_name
 
-    result_sentence = "Heute ist es ziemlich heiß!"
-    current_session_id = intent_message.session_id
-    hermes.publish_end_session(current_session_id, result_sentence)
+    if intentname == user_intent("Temperatur"):
+#        year = datetime.datetime.now().year
+#        month = datetime.datetime.now().month
+#        day = datetime.datetime.now().day
+#        weekday = datetime.datetime.now().isoweekday()
+#        weekday_list = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag']
+        result_sentence = "Heute ist es aber ziemlich heiß"
+        current_session_id = intent_message.session_id
+        hermes.publish_end_session(current_session_id, result_sentence)
 
 if __name__ == "__main__":
     snips_config = toml.load('/etc/snips.toml')
